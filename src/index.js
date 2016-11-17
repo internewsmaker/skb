@@ -66,55 +66,6 @@ app.get('*', async (req, res) => {
   }
 });
 
-// app.get('/3A/:key?/:value?/:add?', (req, res) => {
-//   let CODE = 200;
-//   const key = req.params.key;
-//   const value = req.params.value;
-//   const add = req.params.add;
-//
-//   res.json(hasPropertyLength(PC[key][value]));
-//
-//   if(key === 'volumes') {
-//
-//     const hdd = PC.hdd;
-//
-//     let volumes = {};
-//
-//     for (let key in hdd) {
-//         const d = hdd[key].volume;
-//         if (!volumes[d]) {
-//           volumes[d] = 0;
-//         }
-//         volumes[d] += hdd[key].size;
-//     }
-//
-//     for (let key in volumes) {
-//       volumes[key] = volumes[key] + 'B';
-//     }
-//
-//     return res.json(volumes);
-//
-//   } else if (typeof value == 'undefined' && typeof add == 'undefined') {
-//     var result = hasPropertyLength(PC[key]);
-//   } else if (typeof add == 'undefined' && PC[key] && PC[key][value]) {
-//     var result = PC[key][value];
-//   } else if (PC[key] && PC[key][value]) {
-//     var result = PC[key][value][add];
-//   }
-//
-//   if (typeof result == 'undefined') {
-//     res.status(404).send('Not Found');
-//   }
-//
-//   res.status(CODE);
-//   res.json(result);
-// });
-
-// Роутер для 404
-// app.use(function(req, res, next) {
-//   res.status(404).send('Not Found');
-// });
-
 app.listen(3000, () => {
   console.log('Your app listening on port 3000!');
 });
